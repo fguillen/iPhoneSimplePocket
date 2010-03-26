@@ -1,0 +1,434 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* SimplePocketAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* SimplePocketAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		28860B770F44E54D00985440 /* SimplePocket.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 28860B760F44E54D00985440 /* SimplePocket.xcdatamodel */; };
+		28860BE50F44EE6400985440 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28860BE40F44EE6400985440 /* CoreData.framework */; };
+		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
+		2899E5600DE3E45000AC0155 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E55F0DE3E45000AC0155 /* RootViewController.xib */; };
+		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
+		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
+		5E0AF0471158E7A40075A5A8 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AF0381158E7A40075A5A8 /* arrow.png */; };
+		5E0AF0481158E7A40075A5A8 /* battery.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AF0391158E7A40075A5A8 /* battery.png */; };
+		5E0AF0491158E7A40075A5A8 /* batteryFull.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AF03A1158E7A40075A5A8 /* batteryFull.png */; };
+		5E0AF04A1158E7A40075A5A8 /* box.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AF03B1158E7A40075A5A8 /* box.png */; };
+		5E0AF04B1158E7A40075A5A8 /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AF03C1158E7A40075A5A8 /* calendar.png */; };
+		5E0AF04C1158E7A40075A5A8 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AF03D1158E7A40075A5A8 /* circle.png */; };
+		5E0AF04D1158E7A40075A5A8 /* cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AF03E1158E7A40075A5A8 /* cloud.png */; };
+		5E0AF04E1158E7A40075A5A8 /* comment.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AF03F1158E7A40075A5A8 /* comment.png */; };
+		5E0AF04F1158E7A40075A5A8 /* comments.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AF0401158E7A40075A5A8 /* comments.png */; };
+		5E0AF0501158E7A40075A5A8 /* doc.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AF0411158E7A40075A5A8 /* doc.png */; };
+		5E0AF0511158E7A40075A5A8 /* envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AF0421158E7A40075A5A8 /* envelope.png */; };
+		5E0AF0521158E7A40075A5A8 /* favorite.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AF0431158E7A40075A5A8 /* favorite.png */; };
+		5E0AF0531158E7A40075A5A8 /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AF0441158E7A40075A5A8 /* fire.png */; };
+		5E0AF0541158E7A40075A5A8 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AF0451158E7A40075A5A8 /* home.png */; };
+		5E0AF0551158E7A40075A5A8 /* key.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AF0461158E7A40075A5A8 /* key.png */; };
+		5E0AF05C1158E8860075A5A8 /* IconsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E0AF05A1158E8860075A5A8 /* IconsController.m */; };
+		5E0AF05D1158E8860075A5A8 /* IconsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AF05B1158E8860075A5A8 /* IconsView.xib */; };
+		5E0AF23A115A27A60075A5A8 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E0AF239115A27A60075A5A8 /* CoreDataManager.m */; };
+		5E0AF2A0115A34560075A5A8 /* ItemsIndexController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E0AF29E115A34560075A5A8 /* ItemsIndexController.m */; };
+		5E0AF2A1115A34560075A5A8 /* ItemsIndexView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AF29F115A34560075A5A8 /* ItemsIndexView.xib */; };
+		5E0AF3A2115A5FB80075A5A8 /* ItemsEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E0AF3A0115A5FB80075A5A8 /* ItemsEditController.m */; };
+		5E0AF3A3115A5FB80075A5A8 /* ItemsEditView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AF3A1115A5FB80075A5A8 /* ItemsEditView.xib */; };
+		5E0AF3A9115A60790075A5A8 /* ItemsNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E0AF3A7115A60790075A5A8 /* ItemsNavigationController.m */; };
+		5E0AF3AA115A60790075A5A8 /* ItemsNavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AF3A8115A60790075A5A8 /* ItemsNavigationView.xib */; };
+		5E0AF461115CCEE70075A5A8 /* ItemsShowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E0AF460115CCEE70075A5A8 /* ItemsShowController.m */; };
+		5E0AF5B1115D18330075A5A8 /* ItemsEditTitleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E0AF5AF115D18330075A5A8 /* ItemsEditTitleController.m */; };
+		5E0AF5B2115D18330075A5A8 /* ItemsEditTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AF5B0115D18330075A5A8 /* ItemsEditTitleView.xib */; };
+		5E0AF612115D1EF80075A5A8 /* ItemsEditPriceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E0AF610115D1EF80075A5A8 /* ItemsEditPriceController.m */; };
+		5E0AF613115D1EF80075A5A8 /* ItemsEditPriceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AF611115D1EF80075A5A8 /* ItemsEditPriceView.xib */; };
+		5E0AF6E2115D21030075A5A8 /* ItemsEditDateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E0AF6E0115D21030075A5A8 /* ItemsEditDateController.m */; };
+		5E0AF6E3115D21030075A5A8 /* ItemsEditDateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AF6E1115D21030075A5A8 /* ItemsEditDateView.xib */; };
+		5E0AF75B115D2B240075A5A8 /* ItemsNewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E0AF759115D2B240075A5A8 /* ItemsNewController.m */; };
+		5EF18BD2115D73840051DACE /* Spend.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF18BD1115D73840051DACE /* Spend.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* SimplePocketAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePocketAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* SimplePocketAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePocketAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* SimplePocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimplePocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		28860B760F44E54D00985440 /* SimplePocket.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = SimplePocket.xcdatamodel; sourceTree = "<group>"; };
+		28860BE40F44EE6400985440 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2899E55F0DE3E45000AC0155 /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		28A0AAE50D9B0CCF005BE974 /* SimplePocket_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePocket_Prefix.pch; sourceTree = "<group>"; };
+		28AD735F0D9D9599002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		28C286DF0D94DF7D0034E888 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		28C286E00D94DF7D0034E888 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5E0AF0381158E7A40075A5A8 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrow.png; path = Resources/Icons/arrow.png; sourceTree = "<group>"; };
+		5E0AF0391158E7A40075A5A8 /* battery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = battery.png; path = Resources/Icons/battery.png; sourceTree = "<group>"; };
+		5E0AF03A1158E7A40075A5A8 /* batteryFull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = batteryFull.png; path = Resources/Icons/batteryFull.png; sourceTree = "<group>"; };
+		5E0AF03B1158E7A40075A5A8 /* box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = box.png; path = Resources/Icons/box.png; sourceTree = "<group>"; };
+		5E0AF03C1158E7A40075A5A8 /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = calendar.png; path = Resources/Icons/calendar.png; sourceTree = "<group>"; };
+		5E0AF03D1158E7A40075A5A8 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = circle.png; path = Resources/Icons/circle.png; sourceTree = "<group>"; };
+		5E0AF03E1158E7A40075A5A8 /* cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cloud.png; path = Resources/Icons/cloud.png; sourceTree = "<group>"; };
+		5E0AF03F1158E7A40075A5A8 /* comment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = comment.png; path = Resources/Icons/comment.png; sourceTree = "<group>"; };
+		5E0AF0401158E7A40075A5A8 /* comments.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = comments.png; path = Resources/Icons/comments.png; sourceTree = "<group>"; };
+		5E0AF0411158E7A40075A5A8 /* doc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = doc.png; path = Resources/Icons/doc.png; sourceTree = "<group>"; };
+		5E0AF0421158E7A40075A5A8 /* envelope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = envelope.png; path = Resources/Icons/envelope.png; sourceTree = "<group>"; };
+		5E0AF0431158E7A40075A5A8 /* favorite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = favorite.png; path = Resources/Icons/favorite.png; sourceTree = "<group>"; };
+		5E0AF0441158E7A40075A5A8 /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fire.png; path = Resources/Icons/fire.png; sourceTree = "<group>"; };
+		5E0AF0451158E7A40075A5A8 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = Resources/Icons/home.png; sourceTree = "<group>"; };
+		5E0AF0461158E7A40075A5A8 /* key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = key.png; path = Resources/Icons/key.png; sourceTree = "<group>"; };
+		5E0AF0591158E8860075A5A8 /* IconsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IconsController.h; path = ../IconsController.h; sourceTree = "<group>"; };
+		5E0AF05A1158E8860075A5A8 /* IconsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IconsController.m; path = ../IconsController.m; sourceTree = "<group>"; };
+		5E0AF05B1158E8860075A5A8 /* IconsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IconsView.xib; sourceTree = "<group>"; };
+		5E0AF238115A27A60075A5A8 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		5E0AF239115A27A60075A5A8 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
+		5E0AF29D115A34560075A5A8 /* ItemsIndexController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsIndexController.h; sourceTree = "<group>"; };
+		5E0AF29E115A34560075A5A8 /* ItemsIndexController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsIndexController.m; sourceTree = "<group>"; };
+		5E0AF29F115A34560075A5A8 /* ItemsIndexView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ItemsIndexView.xib; path = Classes/ItemsIndexView.xib; sourceTree = "<group>"; };
+		5E0AF39F115A5FB80075A5A8 /* ItemsEditController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsEditController.h; sourceTree = "<group>"; };
+		5E0AF3A0115A5FB80075A5A8 /* ItemsEditController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsEditController.m; sourceTree = "<group>"; };
+		5E0AF3A1115A5FB80075A5A8 /* ItemsEditView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ItemsEditView.xib; path = Classes/ItemsEditView.xib; sourceTree = "<group>"; };
+		5E0AF3A6115A60790075A5A8 /* ItemsNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsNavigationController.h; sourceTree = "<group>"; };
+		5E0AF3A7115A60790075A5A8 /* ItemsNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsNavigationController.m; sourceTree = "<group>"; };
+		5E0AF3A8115A60790075A5A8 /* ItemsNavigationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ItemsNavigationView.xib; path = Classes/ItemsNavigationView.xib; sourceTree = "<group>"; };
+		5E0AF45F115CCEE70075A5A8 /* ItemsShowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsShowController.h; sourceTree = "<group>"; };
+		5E0AF460115CCEE70075A5A8 /* ItemsShowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsShowController.m; sourceTree = "<group>"; };
+		5E0AF5AE115D18330075A5A8 /* ItemsEditTitleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsEditTitleController.h; sourceTree = "<group>"; };
+		5E0AF5AF115D18330075A5A8 /* ItemsEditTitleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsEditTitleController.m; sourceTree = "<group>"; };
+		5E0AF5B0115D18330075A5A8 /* ItemsEditTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ItemsEditTitleView.xib; path = Classes/ItemsEditTitleView.xib; sourceTree = "<group>"; };
+		5E0AF60F115D1EF80075A5A8 /* ItemsEditPriceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsEditPriceController.h; sourceTree = "<group>"; };
+		5E0AF610115D1EF80075A5A8 /* ItemsEditPriceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsEditPriceController.m; sourceTree = "<group>"; };
+		5E0AF611115D1EF80075A5A8 /* ItemsEditPriceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ItemsEditPriceView.xib; path = Classes/ItemsEditPriceView.xib; sourceTree = "<group>"; };
+		5E0AF6DF115D21030075A5A8 /* ItemsEditDateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsEditDateController.h; sourceTree = "<group>"; };
+		5E0AF6E0115D21030075A5A8 /* ItemsEditDateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsEditDateController.m; sourceTree = "<group>"; };
+		5E0AF6E1115D21030075A5A8 /* ItemsEditDateView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ItemsEditDateView.xib; path = Classes/ItemsEditDateView.xib; sourceTree = "<group>"; };
+		5E0AF758115D2B240075A5A8 /* ItemsNewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsNewController.h; sourceTree = "<group>"; };
+		5E0AF759115D2B240075A5A8 /* ItemsNewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsNewController.m; sourceTree = "<group>"; };
+		5EF18BD0115D73840051DACE /* Spend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spend.h; sourceTree = "<group>"; };
+		5EF18BD1115D73840051DACE /* Spend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Spend.m; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* SimplePocket-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SimplePocket-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
+				28860BE50F44EE6400985440 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5E0AF462115CCF0D0075A5A8 /* Models */,
+				28C286DF0D94DF7D0034E888 /* RootViewController.h */,
+				28C286E00D94DF7D0034E888 /* RootViewController.m */,
+				1D3623240D0F684500981E51 /* SimplePocketAppDelegate.h */,
+				1D3623250D0F684500981E51 /* SimplePocketAppDelegate.m */,
+				5E0AF0591158E8860075A5A8 /* IconsController.h */,
+				5E0AF05A1158E8860075A5A8 /* IconsController.m */,
+				5E0AF238115A27A60075A5A8 /* CoreDataManager.h */,
+				5E0AF239115A27A60075A5A8 /* CoreDataManager.m */,
+				5E0AF29D115A34560075A5A8 /* ItemsIndexController.h */,
+				5E0AF29E115A34560075A5A8 /* ItemsIndexController.m */,
+				5E0AF39F115A5FB80075A5A8 /* ItemsEditController.h */,
+				5E0AF3A0115A5FB80075A5A8 /* ItemsEditController.m */,
+				5E0AF3A6115A60790075A5A8 /* ItemsNavigationController.h */,
+				5E0AF3A7115A60790075A5A8 /* ItemsNavigationController.m */,
+				5E0AF45F115CCEE70075A5A8 /* ItemsShowController.h */,
+				5E0AF460115CCEE70075A5A8 /* ItemsShowController.m */,
+				5E0AF5AE115D18330075A5A8 /* ItemsEditTitleController.h */,
+				5E0AF758115D2B240075A5A8 /* ItemsNewController.h */,
+				5E0AF759115D2B240075A5A8 /* ItemsNewController.m */,
+				5E0AF5AF115D18330075A5A8 /* ItemsEditTitleController.m */,
+				5E0AF60F115D1EF80075A5A8 /* ItemsEditPriceController.h */,
+				5E0AF610115D1EF80075A5A8 /* ItemsEditPriceController.m */,
+				5E0AF6DF115D21030075A5A8 /* ItemsEditDateController.h */,
+				5E0AF6E0115D21030075A5A8 /* ItemsEditDateController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* SimplePocket.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				28A0AAE50D9B0CCF005BE974 /* SimplePocket_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5E0AF3A8115A60790075A5A8 /* ItemsNavigationView.xib */,
+				5E0AF3A1115A5FB80075A5A8 /* ItemsEditView.xib */,
+				5E0AF5B0115D18330075A5A8 /* ItemsEditTitleView.xib */,
+				5E0AF611115D1EF80075A5A8 /* ItemsEditPriceView.xib */,
+				5E0AF6E1115D21030075A5A8 /* ItemsEditDateView.xib */,
+				5E0AF29F115A34560075A5A8 /* ItemsIndexView.xib */,
+				2899E55F0DE3E45000AC0155 /* RootViewController.xib */,
+				5E0AF05B1158E8860075A5A8 /* IconsView.xib */,
+				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
+				5E0AF0371158E7840075A5A8 /* Icons */,
+				28860B760F44E54D00985440 /* SimplePocket.xcdatamodel */,
+				8D1107310486CEB800E47090 /* SimplePocket-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
+				28860BE40F44EE6400985440 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5E0AF0371158E7840075A5A8 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				5E0AF0381158E7A40075A5A8 /* arrow.png */,
+				5E0AF0391158E7A40075A5A8 /* battery.png */,
+				5E0AF03A1158E7A40075A5A8 /* batteryFull.png */,
+				5E0AF03B1158E7A40075A5A8 /* box.png */,
+				5E0AF03C1158E7A40075A5A8 /* calendar.png */,
+				5E0AF03D1158E7A40075A5A8 /* circle.png */,
+				5E0AF03E1158E7A40075A5A8 /* cloud.png */,
+				5E0AF03F1158E7A40075A5A8 /* comment.png */,
+				5E0AF0401158E7A40075A5A8 /* comments.png */,
+				5E0AF0411158E7A40075A5A8 /* doc.png */,
+				5E0AF0421158E7A40075A5A8 /* envelope.png */,
+				5E0AF0431158E7A40075A5A8 /* favorite.png */,
+				5E0AF0441158E7A40075A5A8 /* fire.png */,
+				5E0AF0451158E7A40075A5A8 /* home.png */,
+				5E0AF0461158E7A40075A5A8 /* key.png */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
+		5E0AF462115CCF0D0075A5A8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5EF18BD0115D73840051DACE /* Spend.h */,
+				5EF18BD1115D73840051DACE /* Spend.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* SimplePocket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "SimplePocket" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimplePocket;
+			productName = SimplePocket;
+			productReference = 1D6058910D05DD3D006BFB54 /* SimplePocket.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SimplePocket" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* SimplePocket */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
+				2899E5600DE3E45000AC0155 /* RootViewController.xib in Resources */,
+				5E0AF0471158E7A40075A5A8 /* arrow.png in Resources */,
+				5E0AF0481158E7A40075A5A8 /* battery.png in Resources */,
+				5E0AF0491158E7A40075A5A8 /* batteryFull.png in Resources */,
+				5E0AF04A1158E7A40075A5A8 /* box.png in Resources */,
+				5E0AF04B1158E7A40075A5A8 /* calendar.png in Resources */,
+				5E0AF04C1158E7A40075A5A8 /* circle.png in Resources */,
+				5E0AF04D1158E7A40075A5A8 /* cloud.png in Resources */,
+				5E0AF04E1158E7A40075A5A8 /* comment.png in Resources */,
+				5E0AF04F1158E7A40075A5A8 /* comments.png in Resources */,
+				5E0AF0501158E7A40075A5A8 /* doc.png in Resources */,
+				5E0AF0511158E7A40075A5A8 /* envelope.png in Resources */,
+				5E0AF0521158E7A40075A5A8 /* favorite.png in Resources */,
+				5E0AF0531158E7A40075A5A8 /* fire.png in Resources */,
+				5E0AF0541158E7A40075A5A8 /* home.png in Resources */,
+				5E0AF0551158E7A40075A5A8 /* key.png in Resources */,
+				5E0AF05D1158E8860075A5A8 /* IconsView.xib in Resources */,
+				5E0AF2A1115A34560075A5A8 /* ItemsIndexView.xib in Resources */,
+				5E0AF3A3115A5FB80075A5A8 /* ItemsEditView.xib in Resources */,
+				5E0AF3AA115A60790075A5A8 /* ItemsNavigationView.xib in Resources */,
+				5E0AF5B2115D18330075A5A8 /* ItemsEditTitleView.xib in Resources */,
+				5E0AF613115D1EF80075A5A8 /* ItemsEditPriceView.xib in Resources */,
+				5E0AF6E3115D21030075A5A8 /* ItemsEditDateView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* SimplePocketAppDelegate.m in Sources */,
+				28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */,
+				28860B770F44E54D00985440 /* SimplePocket.xcdatamodel in Sources */,
+				5E0AF05C1158E8860075A5A8 /* IconsController.m in Sources */,
+				5E0AF23A115A27A60075A5A8 /* CoreDataManager.m in Sources */,
+				5E0AF2A0115A34560075A5A8 /* ItemsIndexController.m in Sources */,
+				5E0AF3A2115A5FB80075A5A8 /* ItemsEditController.m in Sources */,
+				5E0AF3A9115A60790075A5A8 /* ItemsNavigationController.m in Sources */,
+				5E0AF461115CCEE70075A5A8 /* ItemsShowController.m in Sources */,
+				5E0AF5B1115D18330075A5A8 /* ItemsEditTitleController.m in Sources */,
+				5E0AF612115D1EF80075A5A8 /* ItemsEditPriceController.m in Sources */,
+				5E0AF6E2115D21030075A5A8 /* ItemsEditDateController.m in Sources */,
+				5E0AF75B115D2B240075A5A8 /* ItemsNewController.m in Sources */,
+				5EF18BD2115D73840051DACE /* Spend.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = SimplePocket_Prefix.pch;
+				INFOPLIST_FILE = "SimplePocket-Info.plist";
+				PRODUCT_NAME = SimplePocket;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = SimplePocket_Prefix.pch;
+				INFOPLIST_FILE = "SimplePocket-Info.plist";
+				PRODUCT_NAME = SimplePocket;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.1.3;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.1.3;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "SimplePocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SimplePocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

@@ -4,6 +4,18 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>FamiliesEditNameView.nib</key>
+		<data>
+		DPzc+QmU55X9igqmM+egCQrWaGI=
+		</data>
+		<key>FamiliesIndexView.nib</key>
+		<data>
+		S+W62erHvsXwJOVLyKTgKzVUeqg=
+		</data>
+		<key>FamiliesNewView.nib</key>
+		<data>
+		LVEBYxm2XwybWNGqOAVUGh5yOnY=
+		</data>
 		<key>IconsView.nib</key>
 		<data>
 		V8VizuhKEvHW8fawHkyr4l+Kwbo=
@@ -14,11 +26,11 @@
 		</data>
 		<key>ItemsEditPriceView.nib</key>
 		<data>
-		H1/50L/d6Ryd9aCSpH86u75gIBM=
+		dduePYx3IXKkiocgqwRSoms5Y9U=
 		</data>
 		<key>ItemsEditTitleView.nib</key>
 		<data>
-		H1/50L/d6Ryd9aCSpH86u75gIBM=
+		wlOcDxAGspSJKKK0aoqIBHZMncI=
 		</data>
 		<key>ItemsEditView.nib</key>
 		<data>
@@ -26,11 +38,15 @@
 		</data>
 		<key>ItemsIndexView.nib</key>
 		<data>
-		EYXDzcaRBHSwtNTLw/0nwcYTel0=
+		mGd6jeGhOrRLWQeOtYgo72hsKT0=
 		</data>
 		<key>ItemsNavigationView.nib</key>
 		<data>
 		bg4qVcGfN1kvXauTMbPQp/2LNCE=
+		</data>
+		<key>ItemsNewView.nib</key>
+		<data>
+		37e0oF2NgSnmVC6/P4azyl2b9oU=
 		</data>
 		<key>MainWindow.nib</key>
 		<data>
@@ -46,7 +62,7 @@
 		</data>
 		<key>SimplePocket.mom</key>
 		<data>
-		zjJyBqW7N89Bb2Z4CtlqMLY9Iwk=
+		dq/g4SpsOR52Gd7JMf/7/spKTxM=
 		</data>
 		<key>arrow.png</key>
 		<data>
@@ -83,6 +99,10 @@
 		<key>comments.png</key>
 		<data>
 		iHdptO8542pvW2pXaNmyJSdQQ2A=
+		</data>
+		<key>default.png</key>
+		<data>
+		IeOsjOlxZFGPRm7c4lEindrGsCE=
 		</data>
 		<key>doc.png</key>
 		<data>

@@ -10,8 +10,11 @@
 #import "ItemsEditTitleController.h"
 #import "ItemsEditPriceController.h"
 #import "ItemsEditDateController.h"
+#import "ItemsEditFamiliesController.h"
 #import "SimplePocketAppDelegate.h"
 #import "Spend.h"
+#import "Family.h"
+#import "Icon.h"
 
 
 @implementation ItemsShowController
@@ -91,44 +94,91 @@
 #pragma mark Table view methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 2;
 }
 
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+	NSLog( @"[ItemsShowController numberOfRowsInSection:%d]", section );
+	NSInteger count = 0;
+	
+	switch (section) {
+		case 0:
+			count = 3;
+			break;
+		default:
+			count = spend.families.count;
+			
+			if( count == 0 ) {
+				count = 1;
+			}
+			
+			break;
+	}
+	NSLog( @"[ItemsShowController numberOfRowsInSection:%d]", section );
+    return count;
 }
 
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifierDetails = @"CellDetails";
+    static NSString *CellIdentifierFamilies = @"CellFamilies";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellIdentifier] autorelease];
-		cell.editingAccessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    }
+	UITableViewCell *cell = nil;
+	
+	if( indexPath.section == 0 ){
+		 cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifierDetails];
+		if (cell == nil) {
+			cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellIdentifierDetails] autorelease];
+			cell.editingAccessoryType = UITableViewCellAccessoryDisclosureIndicator;
+		}
     
-	switch (indexPath.row) {
-		case 0:
-			cell.textLabel.text = @"Name";
-			cell.detailTextLabel.text = spend.name;
-			break;
-		case 1:
-			cell.textLabel.text = @"Price";
-			cell.detailTextLabel.text = [spend.price descriptionWithLocale:nil];
-			break;
-		case 2:
-			cell.textLabel.text = @"Date";
-			cell.detailTextLabel.text = [spend.date description];
-			break;
-			
-		default:
-			break;
-	}
+		switch (indexPath.row) {
+			case 0:
+				cell.textLabel.text = @"Name";
+				cell.detailTextLabel.text = spend.name;
+				break;
+			case 1:
+				cell.textLabel.text = @"Price";
+				
+				NSNumberFormatter *numberFormatter = [[[NSNumberFormatter alloc] init] autorelease];
+				[numberFormatter setNumberStyle: NSNumberFormatterCurrencyStyle];
+				NSString *priceFormatted = [numberFormatter stringFromNumber:spend.price];
+				
+				cell.detailTextLabel.text = priceFormatted;
+				break;
+			case 2:
+				cell.textLabel.text = @"Date";
+				cell.detailTextLabel.text = [spend.date description];
+				break;
+				
+			default:
+				break;
+		}
+	
+	} else {
+		
+		cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifierFamilies];
+		if (cell == nil) {
+			cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifierFamilies] autorelease];
+		}
+		
+		NSString *filename = @"default";
+		
+		if( spend.families.count > 0 ){
+			Family *family = (Family *)[[spend.families allObjects] objectAtIndex:indexPath.row];
+			filename = family.icon.filename;
+		}
+
+		cell.textLabel.text = filename;
+		
+		NSString *path = [[NSBundle mainBundle] pathForResource:filename ofType:@"png"];
+		UIImage *theImage = [UIImage imageWithContentsOfFile:path];
+		cell.imageView.image = theImage;
+	}		
 	
     return cell;
 }
@@ -137,32 +187,38 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	NSLog( @"[ItemsShowController didSelectRowAtIndexPath:%d]", indexPath.row );
 	
-	switch(indexPath.row) {
-		case 0:
-			NSLog( @"title" );
-			ItemsEditTitleController *itemsEditTitleController = [[ItemsEditTitleController alloc] initWithNibName:@"ItemsEditTitleView" bundle:nil];
-			itemsEditTitleController.spend = [self spend];			
-			[[self navigationController] pushViewController:itemsEditTitleController animated:YES];
-			[itemsEditTitleController release];
-			break;
-		case 1:
-			NSLog( @"price" );
-			ItemsEditPriceController *itemsEditPriceController = [[ItemsEditPriceController alloc] initWithNibName:@"ItemsEditPriceView" bundle:nil];
-			itemsEditPriceController.spend = [self spend];			
-			[[self navigationController] pushViewController:itemsEditPriceController animated:YES];
-			[itemsEditPriceController release];
-			break;
-		case 2:
-			NSLog( @"date" );
-			ItemsEditDateController *itemsEditDateController = [[ItemsEditDateController alloc] initWithNibName:@"ItemsEditDateView" bundle:nil];
-			itemsEditDateController.spend = [self spend];			
-			[[self navigationController] pushViewController:itemsEditDateController animated:YES];
-			[itemsEditDateController release];
-			break;
-		default:
-			break;
+	if( indexPath.section == 0 ) {
+		switch(indexPath.row) {
+			case 0:
+				NSLog( @"title" );
+				ItemsEditTitleController *itemsEditTitleController = [[ItemsEditTitleController alloc] initWithNibName:@"ItemsEditTitleView" bundle:nil];
+				itemsEditTitleController.spend = [self spend];			
+				[[self navigationController] pushViewController:itemsEditTitleController animated:YES];
+				[itemsEditTitleController release];
+				break;
+			case 1:
+				NSLog( @"price" );
+				ItemsEditPriceController *itemsEditPriceController = [[ItemsEditPriceController alloc] initWithNibName:@"ItemsEditPriceView" bundle:nil];
+				itemsEditPriceController.spend = [self spend];			
+				[[self navigationController] pushViewController:itemsEditPriceController animated:YES];
+				[itemsEditPriceController release];
+				break;
+			case 2:
+				NSLog( @"date" );
+				ItemsEditDateController *itemsEditDateController = [[ItemsEditDateController alloc] initWithNibName:@"ItemsEditDateView" bundle:nil];
+				itemsEditDateController.spend = [self spend];			
+				[[self navigationController] pushViewController:itemsEditDateController animated:YES];
+				[itemsEditDateController release];
+				break;
+			default:
+				break;
+		}
+	} else {
+		ItemsEditFamiliesController *itemsEditFamiliesController = [[ItemsEditFamiliesController alloc] initWithNibName:@"FamiliesIndexView" bundle:nil];
+		itemsEditFamiliesController.spend = spend;
+		[[self navigationController] pushViewController:itemsEditFamiliesController animated:YES];
+		[itemsEditFamiliesController release];
 	}
-	
 	NSLog( @"[ItemsShowController didSelectRowAtIndexPath:%d] : END", indexPath.row );
 }
 
@@ -174,6 +230,18 @@
 
 - (BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath {
 	return NO;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+	NSLog( @"[ItemsShowController titleForHeaderInSection:%d]", section );
+	NSString *title = @"Details";
+	
+	if( section == 1 ) {
+		title = @"Families";
+	}
+	
+	NSLog( @"[ItemsShowController titleForHeaderInSection:%d] : END : %@", section, title );
+	return title;
 }
 
 # pragma mark Memory Management

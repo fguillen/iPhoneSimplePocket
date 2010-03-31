@@ -31,8 +31,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	textField.text = [[self spend] name];
-	textField.placeholder = [[self spend] name];
+	textField.text = spend.name;
+	textField.placeholder = spend.name;
 	[textField becomeFirstResponder];
 	
 	// Configure the save and cancel buttons.

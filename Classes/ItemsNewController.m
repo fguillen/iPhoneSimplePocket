@@ -7,10 +7,16 @@
 //
 
 #import "ItemsNewController.h"
+#import "SimplePocketAppDelegate.h"
 #import "Spend.h"
 
 
 @implementation ItemsNewController
+
+@synthesize spend;
+@synthesize nameTextField;
+@synthesize priceTextField;
+@synthesize datePicker;
 
 /*
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -28,13 +34,17 @@
     [super viewDidLoad];
 	
     // Override the DetailViewController viewDidLoad with different navigation bar items and title.
-    self.title = @"New Book";
-    self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel 
-																	  target:self 
-																	  action:@selector(cancel:)] autorelease];
-    self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave 
-																	   target:self 
-																	   action:@selector(save:)] autorelease];
+    self.title = @"New Spend";
+
+	// Create new Spend
+	NSManagedObjectContext *context = [(SimplePocketAppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
+	spend = (Spend *)[NSEntityDescription insertNewObjectForEntityForName:@"Spend" inManagedObjectContext:context];
+
+	// initialize datePicker
+	datePicker.date = [NSDate date];
+	
+	// start writting name
+	[nameTextField becomeFirstResponder];
 }
 
 /*
@@ -53,7 +63,7 @@
 }
 
 #pragma mark -
-#pragma mark Save and cancel operations
+#pragma mark Actions
 
 - (IBAction)cancel:(id)sender {
 	NSLog( @"[ItemsNewController cancel]" );
@@ -78,9 +88,35 @@
 - (IBAction)save:(id)sender {
 	NSLog( @"[ItemsNewController save]" );
 	
+	self.spend.name = nameTextField.text;
+	self.spend.price = [NSDecimalNumber decimalNumberWithString:priceTextField.text];
+	self.spend.date = datePicker.date;
+	
+	// Save the managed object.
+	NSError *error;
+	if (![[spend managedObjectContext] save:&error]) {
+		// Update to handle the error appropriately.
+		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+		exit(-1);  // Fail
+	}
+	
 	// Dismiss the modal view to return to the main list
     [self dismissModalViewControllerAnimated:YES];
 	NSLog( @"[ItemsNewController save] : END" );
+}
+
+-(IBAction) nameDone:(id)sender{
+	NSLog( @"[ItemsNewController nameDone]" );
+	[nameTextField resignFirstResponder];
+	[priceTextField becomeFirstResponder];
+	NSLog( @"[ItemsNewController nameDone] : END" );
+}
+
+-(IBAction) priceDone:(id)sender{
+	NSLog( @"[ItemsNewController priceDone]" );
+	[priceTextField resignFirstResponder];
+	[datePicker becomeFirstResponder];
+	NSLog( @"[ItemsNewController priceDone] : END" );
 }
 
 

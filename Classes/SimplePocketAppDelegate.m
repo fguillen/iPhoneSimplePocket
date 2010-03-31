@@ -30,7 +30,7 @@
 	// Initialize CoreDataManager
 	cdm = [CoreDataManager alloc];
 
-//	[cdm feedItems];
+	[cdm feedIcons];
 	
 //	iconsController = [IconsController alloc];
 //	[iconsController performFetch];
@@ -38,7 +38,6 @@
 //	
 //	
 //	itemsIndexController = [[ItemsIndexController alloc] initWithNibName:@"ItemsIndexView" bundle:nil];
-//	itemsNavigationController = [[ItemsNavigationController alloc] initWithNibName:@"ItemsNavigationView" bundle:nil];
 	
 //	RootViewController *rootViewController = (RootViewController *)[navigationController topViewController];
 //	rootViewController.managedObjectContext = self.managedObjectContext;

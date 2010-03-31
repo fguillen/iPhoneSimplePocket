@@ -8,6 +8,7 @@
 
 #import "RootViewController.h"
 #import "ItemsIndexController.h"
+#import "FamiliesIndexController.h"
 
 
 @implementation RootViewController
@@ -20,6 +21,8 @@
 - (void)viewDidLoad {
 	NSLog( @"[RootViewController viewDidLoad]" );
     [super viewDidLoad];
+	
+	self.title = @"Menu";
 	NSLog( @"[RootViewController viewDidLoad] : END" );
 }
 
@@ -90,6 +93,9 @@
 		case 0:
 			[self showItems];
 			break;
+		case 1:
+			[self showFamilies];
+			break;
 		default:
 			break;
 	}
@@ -97,7 +103,7 @@
 	NSLog( @"[RootViewController didSelectRowAtIndexPath:%d] : END", [indexPath row] );
 }
 
-# pragma Menu Actions
+# pragma mark Menu Actions
 
 - (void) showItems{
 	NSLog( @"[RootViewController showItems]" );
@@ -108,7 +114,17 @@
 	
 	NSLog( @"[RootViewController showItems] : END" );
 }
+
+- (void) showFamilies{
+	NSLog( @"[RootViewController showFamilies]" );
 	
+	FamiliesIndexController *familiesIndexController = [[FamiliesIndexController alloc] initWithNibName:@"FamiliesIndexView" bundle:nil];
+	[[self navigationController] pushViewController:familiesIndexController animated:YES];
+	[familiesIndexController release];
+	
+	NSLog( @"[RootViewController showFamilies] : END" );
+}
+
 #pragma mark -
 #pragma mark Memory management
 

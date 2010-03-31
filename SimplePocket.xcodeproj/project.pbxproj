@@ -39,7 +39,6 @@
 		5E0AF2A1115A34560075A5A8 /* ItemsIndexView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AF29F115A34560075A5A8 /* ItemsIndexView.xib */; };
 		5E0AF3A2115A5FB80075A5A8 /* ItemsEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E0AF3A0115A5FB80075A5A8 /* ItemsEditController.m */; };
 		5E0AF3A3115A5FB80075A5A8 /* ItemsEditView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AF3A1115A5FB80075A5A8 /* ItemsEditView.xib */; };
-		5E0AF3A9115A60790075A5A8 /* ItemsNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E0AF3A7115A60790075A5A8 /* ItemsNavigationController.m */; };
 		5E0AF3AA115A60790075A5A8 /* ItemsNavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AF3A8115A60790075A5A8 /* ItemsNavigationView.xib */; };
 		5E0AF461115CCEE70075A5A8 /* ItemsShowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E0AF460115CCEE70075A5A8 /* ItemsShowController.m */; };
 		5E0AF5B1115D18330075A5A8 /* ItemsEditTitleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E0AF5AF115D18330075A5A8 /* ItemsEditTitleController.m */; };
@@ -49,7 +48,20 @@
 		5E0AF6E2115D21030075A5A8 /* ItemsEditDateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E0AF6E0115D21030075A5A8 /* ItemsEditDateController.m */; };
 		5E0AF6E3115D21030075A5A8 /* ItemsEditDateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AF6E1115D21030075A5A8 /* ItemsEditDateView.xib */; };
 		5E0AF75B115D2B240075A5A8 /* ItemsNewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E0AF759115D2B240075A5A8 /* ItemsNewController.m */; };
-		5EF18BD2115D73840051DACE /* Spend.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF18BD1115D73840051DACE /* Spend.m */; };
+		5EF18CAB1160AC960051DACE /* ItemsNewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EF18CAA1160AC960051DACE /* ItemsNewView.xib */; };
+		5EF18D311161EB470051DACE /* Spend.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF18D2D1161EB470051DACE /* Spend.m */; };
+		5EF18D321161EB470051DACE /* Icon.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF18D2F1161EB470051DACE /* Icon.m */; };
+		5EF18DA31161F10B0051DACE /* FamiliesIndexController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF18DA11161F10B0051DACE /* FamiliesIndexController.m */; };
+		5EF18DA41161F10B0051DACE /* FamiliesIndexView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EF18DA21161F10B0051DACE /* FamiliesIndexView.xib */; };
+		5EF18E7611620EFF0051DACE /* FamiliesNewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF18E7411620EFF0051DACE /* FamiliesNewController.m */; };
+		5EF18E7711620EFF0051DACE /* FamiliesNewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EF18E7511620EFF0051DACE /* FamiliesNewView.xib */; };
+		5EF18EF0116219F60051DACE /* Family.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF18EEF116219F60051DACE /* Family.m */; };
+		5EF18F0311621A610051DACE /* FamiliesShowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF18F0211621A610051DACE /* FamiliesShowController.m */; };
+		5EF18F0711621B670051DACE /* FamiliesEditNameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF18F0511621B670051DACE /* FamiliesEditNameController.m */; };
+		5EF18F0811621B670051DACE /* FamiliesEditNameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EF18F0611621B670051DACE /* FamiliesEditNameView.xib */; };
+		5EF18F5B11624B010051DACE /* FamiliesEditIconController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF18F5911624B010051DACE /* FamiliesEditIconController.m */; };
+		5EF18FEB116257270051DACE /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EF18FEA116257270051DACE /* default.png */; };
+		5EF1906B11635EFA0051DACE /* ItemsEditFamiliesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF1906A11635EFA0051DACE /* ItemsEditFamiliesController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,8 +105,6 @@
 		5E0AF39F115A5FB80075A5A8 /* ItemsEditController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsEditController.h; sourceTree = "<group>"; };
 		5E0AF3A0115A5FB80075A5A8 /* ItemsEditController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsEditController.m; sourceTree = "<group>"; };
 		5E0AF3A1115A5FB80075A5A8 /* ItemsEditView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ItemsEditView.xib; path = Classes/ItemsEditView.xib; sourceTree = "<group>"; };
-		5E0AF3A6115A60790075A5A8 /* ItemsNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsNavigationController.h; sourceTree = "<group>"; };
-		5E0AF3A7115A60790075A5A8 /* ItemsNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsNavigationController.m; sourceTree = "<group>"; };
 		5E0AF3A8115A60790075A5A8 /* ItemsNavigationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ItemsNavigationView.xib; path = Classes/ItemsNavigationView.xib; sourceTree = "<group>"; };
 		5E0AF45F115CCEE70075A5A8 /* ItemsShowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsShowController.h; sourceTree = "<group>"; };
 		5E0AF460115CCEE70075A5A8 /* ItemsShowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsShowController.m; sourceTree = "<group>"; };
@@ -109,8 +119,29 @@
 		5E0AF6E1115D21030075A5A8 /* ItemsEditDateView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ItemsEditDateView.xib; path = Classes/ItemsEditDateView.xib; sourceTree = "<group>"; };
 		5E0AF758115D2B240075A5A8 /* ItemsNewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsNewController.h; sourceTree = "<group>"; };
 		5E0AF759115D2B240075A5A8 /* ItemsNewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsNewController.m; sourceTree = "<group>"; };
-		5EF18BD0115D73840051DACE /* Spend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spend.h; sourceTree = "<group>"; };
-		5EF18BD1115D73840051DACE /* Spend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Spend.m; sourceTree = "<group>"; };
+		5EF18CAA1160AC960051DACE /* ItemsNewView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemsNewView.xib; sourceTree = "<group>"; };
+		5EF18D2C1161EB470051DACE /* Spend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spend.h; sourceTree = "<group>"; };
+		5EF18D2D1161EB470051DACE /* Spend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Spend.m; sourceTree = "<group>"; };
+		5EF18D2E1161EB470051DACE /* Icon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Icon.h; sourceTree = "<group>"; };
+		5EF18D2F1161EB470051DACE /* Icon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Icon.m; sourceTree = "<group>"; };
+		5EF18DA01161F10B0051DACE /* FamiliesIndexController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FamiliesIndexController.h; sourceTree = "<group>"; };
+		5EF18DA11161F10B0051DACE /* FamiliesIndexController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FamiliesIndexController.m; sourceTree = "<group>"; };
+		5EF18DA21161F10B0051DACE /* FamiliesIndexView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FamiliesIndexView.xib; sourceTree = "<group>"; };
+		5EF18E7311620EFF0051DACE /* FamiliesNewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FamiliesNewController.h; sourceTree = "<group>"; };
+		5EF18E7411620EFF0051DACE /* FamiliesNewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FamiliesNewController.m; sourceTree = "<group>"; };
+		5EF18E7511620EFF0051DACE /* FamiliesNewView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FamiliesNewView.xib; sourceTree = "<group>"; };
+		5EF18EEE116219F60051DACE /* Family.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Family.h; path = ../Family.h; sourceTree = "<group>"; };
+		5EF18EEF116219F60051DACE /* Family.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Family.m; path = ../Family.m; sourceTree = "<group>"; };
+		5EF18F0111621A610051DACE /* FamiliesShowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FamiliesShowController.h; sourceTree = "<group>"; };
+		5EF18F0211621A610051DACE /* FamiliesShowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FamiliesShowController.m; sourceTree = "<group>"; };
+		5EF18F0411621B670051DACE /* FamiliesEditNameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FamiliesEditNameController.h; sourceTree = "<group>"; };
+		5EF18F0511621B670051DACE /* FamiliesEditNameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FamiliesEditNameController.m; sourceTree = "<group>"; };
+		5EF18F0611621B670051DACE /* FamiliesEditNameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FamiliesEditNameView.xib; sourceTree = "<group>"; };
+		5EF18F5811624B010051DACE /* FamiliesEditIconController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FamiliesEditIconController.h; sourceTree = "<group>"; };
+		5EF18F5911624B010051DACE /* FamiliesEditIconController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FamiliesEditIconController.m; sourceTree = "<group>"; };
+		5EF18FEA116257270051DACE /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = default.png; path = Resources/Icons/default.png; sourceTree = "<group>"; };
+		5EF1906911635EFA0051DACE /* ItemsEditFamiliesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsEditFamiliesController.h; sourceTree = "<group>"; };
+		5EF1906A11635EFA0051DACE /* ItemsEditFamiliesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsEditFamiliesController.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* SimplePocket-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SimplePocket-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,6 +163,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5EF18CF31160EFA30051DACE /* FamiliesManagement */,
+				5EF18CF21160EF930051DACE /* ItemsManagement */,
 				5E0AF462115CCF0D0075A5A8 /* Models */,
 				28C286DF0D94DF7D0034E888 /* RootViewController.h */,
 				28C286E00D94DF7D0034E888 /* RootViewController.m */,
@@ -141,22 +174,6 @@
 				5E0AF05A1158E8860075A5A8 /* IconsController.m */,
 				5E0AF238115A27A60075A5A8 /* CoreDataManager.h */,
 				5E0AF239115A27A60075A5A8 /* CoreDataManager.m */,
-				5E0AF29D115A34560075A5A8 /* ItemsIndexController.h */,
-				5E0AF29E115A34560075A5A8 /* ItemsIndexController.m */,
-				5E0AF39F115A5FB80075A5A8 /* ItemsEditController.h */,
-				5E0AF3A0115A5FB80075A5A8 /* ItemsEditController.m */,
-				5E0AF3A6115A60790075A5A8 /* ItemsNavigationController.h */,
-				5E0AF3A7115A60790075A5A8 /* ItemsNavigationController.m */,
-				5E0AF45F115CCEE70075A5A8 /* ItemsShowController.h */,
-				5E0AF460115CCEE70075A5A8 /* ItemsShowController.m */,
-				5E0AF5AE115D18330075A5A8 /* ItemsEditTitleController.h */,
-				5E0AF758115D2B240075A5A8 /* ItemsNewController.h */,
-				5E0AF759115D2B240075A5A8 /* ItemsNewController.m */,
-				5E0AF5AF115D18330075A5A8 /* ItemsEditTitleController.m */,
-				5E0AF60F115D1EF80075A5A8 /* ItemsEditPriceController.h */,
-				5E0AF610115D1EF80075A5A8 /* ItemsEditPriceController.m */,
-				5E0AF6DF115D21030075A5A8 /* ItemsEditDateController.h */,
-				5E0AF6E0115D21030075A5A8 /* ItemsEditDateController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -205,6 +222,7 @@
 				5E0AF0371158E7840075A5A8 /* Icons */,
 				28860B760F44E54D00985440 /* SimplePocket.xcdatamodel */,
 				8D1107310486CEB800E47090 /* SimplePocket-Info.plist */,
+				5EF18CAA1160AC960051DACE /* ItemsNewView.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -223,6 +241,7 @@
 		5E0AF0371158E7840075A5A8 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				5EF18FEA116257270051DACE /* default.png */,
 				5E0AF0381158E7A40075A5A8 /* arrow.png */,
 				5E0AF0391158E7A40075A5A8 /* battery.png */,
 				5E0AF03A1158E7A40075A5A8 /* batteryFull.png */,
@@ -245,10 +264,57 @@
 		5E0AF462115CCF0D0075A5A8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5EF18BD0115D73840051DACE /* Spend.h */,
-				5EF18BD1115D73840051DACE /* Spend.m */,
+				5EF18D2C1161EB470051DACE /* Spend.h */,
+				5EF18D2D1161EB470051DACE /* Spend.m */,
+				5EF18D2E1161EB470051DACE /* Icon.h */,
+				5EF18D2F1161EB470051DACE /* Icon.m */,
+				5EF18EEE116219F60051DACE /* Family.h */,
+				5EF18EEF116219F60051DACE /* Family.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		5EF18CF21160EF930051DACE /* ItemsManagement */ = {
+			isa = PBXGroup;
+			children = (
+				5E0AF29D115A34560075A5A8 /* ItemsIndexController.h */,
+				5E0AF29E115A34560075A5A8 /* ItemsIndexController.m */,
+				5E0AF39F115A5FB80075A5A8 /* ItemsEditController.h */,
+				5E0AF3A0115A5FB80075A5A8 /* ItemsEditController.m */,
+				5E0AF45F115CCEE70075A5A8 /* ItemsShowController.h */,
+				5E0AF460115CCEE70075A5A8 /* ItemsShowController.m */,
+				5E0AF758115D2B240075A5A8 /* ItemsNewController.h */,
+				5E0AF759115D2B240075A5A8 /* ItemsNewController.m */,
+				5E0AF5AE115D18330075A5A8 /* ItemsEditTitleController.h */,
+				5E0AF5AF115D18330075A5A8 /* ItemsEditTitleController.m */,
+				5E0AF60F115D1EF80075A5A8 /* ItemsEditPriceController.h */,
+				5E0AF610115D1EF80075A5A8 /* ItemsEditPriceController.m */,
+				5E0AF6DF115D21030075A5A8 /* ItemsEditDateController.h */,
+				5E0AF6E0115D21030075A5A8 /* ItemsEditDateController.m */,
+				5EF1906911635EFA0051DACE /* ItemsEditFamiliesController.h */,
+				5EF1906A11635EFA0051DACE /* ItemsEditFamiliesController.m */,
+			);
+			name = ItemsManagement;
+			sourceTree = "<group>";
+		};
+		5EF18CF31160EFA30051DACE /* FamiliesManagement */ = {
+			isa = PBXGroup;
+			children = (
+				5EF18DA01161F10B0051DACE /* FamiliesIndexController.h */,
+				5EF18DA11161F10B0051DACE /* FamiliesIndexController.m */,
+				5EF18DA21161F10B0051DACE /* FamiliesIndexView.xib */,
+				5EF18E7311620EFF0051DACE /* FamiliesNewController.h */,
+				5EF18E7411620EFF0051DACE /* FamiliesNewController.m */,
+				5EF18E7511620EFF0051DACE /* FamiliesNewView.xib */,
+				5EF18F0111621A610051DACE /* FamiliesShowController.h */,
+				5EF18F0211621A610051DACE /* FamiliesShowController.m */,
+				5EF18F5811624B010051DACE /* FamiliesEditIconController.h */,
+				5EF18F5911624B010051DACE /* FamiliesEditIconController.m */,
+				5EF18F0411621B670051DACE /* FamiliesEditNameController.h */,
+				5EF18F0511621B670051DACE /* FamiliesEditNameController.m */,
+				5EF18F0611621B670051DACE /* FamiliesEditNameView.xib */,
+			);
+			name = FamiliesManagement;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,6 +390,11 @@
 				5E0AF5B2115D18330075A5A8 /* ItemsEditTitleView.xib in Resources */,
 				5E0AF613115D1EF80075A5A8 /* ItemsEditPriceView.xib in Resources */,
 				5E0AF6E3115D21030075A5A8 /* ItemsEditDateView.xib in Resources */,
+				5EF18CAB1160AC960051DACE /* ItemsNewView.xib in Resources */,
+				5EF18DA41161F10B0051DACE /* FamiliesIndexView.xib in Resources */,
+				5EF18E7711620EFF0051DACE /* FamiliesNewView.xib in Resources */,
+				5EF18F0811621B670051DACE /* FamiliesEditNameView.xib in Resources */,
+				5EF18FEB116257270051DACE /* default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,13 +413,20 @@
 				5E0AF23A115A27A60075A5A8 /* CoreDataManager.m in Sources */,
 				5E0AF2A0115A34560075A5A8 /* ItemsIndexController.m in Sources */,
 				5E0AF3A2115A5FB80075A5A8 /* ItemsEditController.m in Sources */,
-				5E0AF3A9115A60790075A5A8 /* ItemsNavigationController.m in Sources */,
 				5E0AF461115CCEE70075A5A8 /* ItemsShowController.m in Sources */,
 				5E0AF5B1115D18330075A5A8 /* ItemsEditTitleController.m in Sources */,
 				5E0AF612115D1EF80075A5A8 /* ItemsEditPriceController.m in Sources */,
 				5E0AF6E2115D21030075A5A8 /* ItemsEditDateController.m in Sources */,
 				5E0AF75B115D2B240075A5A8 /* ItemsNewController.m in Sources */,
-				5EF18BD2115D73840051DACE /* Spend.m in Sources */,
+				5EF18D311161EB470051DACE /* Spend.m in Sources */,
+				5EF18D321161EB470051DACE /* Icon.m in Sources */,
+				5EF18DA31161F10B0051DACE /* FamiliesIndexController.m in Sources */,
+				5EF18E7611620EFF0051DACE /* FamiliesNewController.m in Sources */,
+				5EF18EF0116219F60051DACE /* Family.m in Sources */,
+				5EF18F0311621A610051DACE /* FamiliesShowController.m in Sources */,
+				5EF18F0711621B670051DACE /* FamiliesEditNameController.m in Sources */,
+				5EF18F5B11624B010051DACE /* FamiliesEditIconController.m in Sources */,
+				5EF1906B11635EFA0051DACE /* ItemsEditFamiliesController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

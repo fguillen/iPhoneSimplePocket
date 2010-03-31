@@ -9,7 +9,6 @@
 @class IconsController;
 @class ItemsIndexController;
 @class CoreDataManager;
-@class ItemsNavigationController;
 
 @interface SimplePocketAppDelegate : NSObject <UIApplicationDelegate> {
     
@@ -17,11 +16,8 @@
     NSManagedObjectContext *managedObjectContext;	    
     NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
-    UIWindow *window;
-//    UINavigationController *navigationController;
-	
+    UIWindow *window;	
 	IconsController *iconsController;
-	ItemsNavigationController *itemsNavigationController;
 	ItemsIndexController *itemsIndexController;
 	CoreDataManager *cdm;
 	
@@ -38,7 +34,6 @@
 @property (nonatomic, retain) IBOutlet UINavigationController *navigationController;
 
 @property (nonatomic, retain) IconsController *iconsController;
-@property (nonatomic, retain) ItemsNavigationController *itemsNavigationController;
 @property (nonatomic, retain) ItemsIndexController *itemsIndexController;
 //@property (nonatomic, retain) IBOutlet UINavigationController *navigationController;
 

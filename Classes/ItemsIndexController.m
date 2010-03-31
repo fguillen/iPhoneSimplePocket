@@ -12,6 +12,8 @@
 #import "SimplePocketAppDelegate.h"
 #import "CoreDataManager.h"
 #import "Spend.h"
+#import "Family.h"
+#import "Icon.h"
 
 
 @implementation ItemsIndexController
@@ -99,9 +101,19 @@
     
 	Spend *spend = (Spend *)[fetchedResultsController objectAtIndexPath:indexPath];
 	cell.textLabel.text = spend.name;
-	cell.detailTextLabel.text = [spend.price descriptionWithLocale:nil];
 	
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"battery" ofType:@"png"];
+	NSNumberFormatter *numberFormatter = [[[NSNumberFormatter alloc] init] autorelease];
+	[numberFormatter setNumberStyle: NSNumberFormatterCurrencyStyle];
+	NSString *priceFormatted = [numberFormatter stringFromNumber:spend.price];
+	
+	cell.detailTextLabel.text = priceFormatted;
+	
+	// image
+	NSString *filename = @"default";
+	if( spend.families.count > 0 ){
+		filename = [[(Family *)[[spend.families allObjects] objectAtIndex:0] icon] filename];
+	}
+    NSString *path = [[NSBundle mainBundle] pathForResource:filename ofType:@"png"];
     UIImage *theImage = [UIImage imageWithContentsOfFile:path];
     cell.imageView.image = theImage;
 	
@@ -144,16 +156,17 @@
 	Spend *spend = nil;
 	for (spend in spendsOnSection) {
 		NSDecimal price = [spend.price decimalValue];
-		NSLog( @"[ItemsIndexController titleForHeaderInSection] : spend.name: %@", spend.name ); 
-		NSLog( @"[ItemsIndexController titleForHeaderInSection] : spend.price: %@", spend.price ); 
-		NSLog( @"[ItemsIndexController titleForHeaderInSection] : spend.price decimalValue: %d", [spend.price decimalValue]); 
-		NSLog( @"[ItemsIndexController titleForHeaderInSection] : price: %1.2f", price ); 
-		
 		NSDecimalAdd( &total, &total, &price, NSRoundBankers);
-		NSLog( @"[ItemsIndexController titleForHeaderInSection] : total: %d", total );
 	}
+
 	
-	NSString *sectionName = [NSString stringWithFormat:@"%@ (%d)", sectionInfo.name, total];
+	NSDecimalNumber *total_number = [NSDecimalNumber decimalNumberWithDecimal:total];
+	
+    NSNumberFormatter *numberFormatter = [[[NSNumberFormatter alloc] init] autorelease];
+    [numberFormatter setNumberStyle: NSNumberFormatterCurrencyStyle];
+    NSString *total_formatted = [numberFormatter stringFromNumber:total_number];
+	
+	NSString *sectionName = [NSString stringWithFormat:@"%@ (%@)", sectionInfo.name, total_formatted];
 	
 	NSLog( @"[ItemsIndexController titleForHeaderInSection:%d] : %@ : END", section, sectionName );
 	return sectionName;
@@ -163,18 +176,10 @@
 - (IBAction) addItem:(id)sender{
 	NSLog( @"[ItemsIndexController addItem]" );
 
-	
-	NSManagedObjectContext *context = [(SimplePocketAppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
-	Spend *selectedSpend = (Spend *)[NSEntityDescription insertNewObjectForEntityForName:@"Spend" inManagedObjectContext:context];
-	
-	ItemsNewController *itemsNewController = [[ItemsNewController alloc] initWithStyle:UITableViewStyleGrouped];
-	itemsNewController.spend = selectedSpend;
-	
-	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:itemsNewController];
-    [self.navigationController presentModalViewController:navController animated:YES];
+	ItemsNewController *itemsNewController = [[ItemsNewController alloc] initWithNibName:@"ItemsNewView" bundle:nil];
+    [self.navigationController presentModalViewController:itemsNewController animated:YES];
 	
 	[itemsNewController release];
-	[navController release];
 	
 	NSLog( @"[ItemsIndexController addItem] : END" );
 }

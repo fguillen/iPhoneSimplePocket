@@ -12,13 +12,17 @@
 @interface CoreDataManager : NSObject {
 	NSFetchedResultsController *iconsFetchedResultsController;
 	NSFetchedResultsController *itemsFetchedResultsController;
+	NSFetchedResultsController *familiesFetchedResultsController;
 }
 
 @property (nonatomic, retain) NSFetchedResultsController *iconsFetchedResultsController;
 @property (nonatomic, retain) NSFetchedResultsController *itemsFetchedResultsController;
+@property (nonatomic, retain) NSFetchedResultsController *familiesFetchedResultsController;
 
 - (NSFetchedResultsController *)iconsFetchedResultsController;
 - (NSFetchedResultsController *)itemsFetchedResultsController;
+- (NSFetchedResultsController *)familiesFetchedResultsController;
 - (void)feedItems;
+- (void)feedIcons;
 
 @end

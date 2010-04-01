@@ -9,18 +9,21 @@
 #import "ItemsShowController.h"
 
 @class Spend;
+@class ItemsIndexController;
 
 
 @interface ItemsNewController : UIViewController {
 	UITextField *nameTextField;
 	UITextField *priceTextField;
 	UIDatePicker *datePicker;
+	ItemsIndexController *indexController;
 	Spend *spend;
 }
 
 @property (nonatomic, retain) IBOutlet UITextField *nameTextField;
 @property (nonatomic, retain) IBOutlet UITextField *priceTextField;
 @property (nonatomic, retain) IBOutlet UIDatePicker *datePicker;
+@property (nonatomic, retain) ItemsIndexController *indexController;
 @property (nonatomic, retain) Spend *spend;
 
 - (IBAction)nameDone:(id)sender;

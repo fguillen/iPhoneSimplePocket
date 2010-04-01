@@ -41,6 +41,8 @@
 		abort();
 	}
 	
+	self.navigationItem.rightBarButtonItem = self.editButtonItem;
+	
 	NSLog( @"[ItemsIndexController viewDidLoad] : END" );
 }
 
@@ -172,11 +174,49 @@
 	return sectionName;
 }
 
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated {
+	NSLog( @"[ItemsIndexController setEditing:%d]", editing );
+    [super setEditing:editing animated:animated];
+	[self.tableView setEditing:editing animated:animated];
+	NSLog( @"[ItemsIndexController setEditing:%d] : END", editing );
+}
+
+- (void)tableView:(UITableView *)_tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+	NSLog( @"[ItemsIndexController commitEditingStyle:%d forRowAtIndexPath:%d]", editingStyle, indexPath.row );
+	
+	
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+		NSFetchedResultsController *fetchedResultsController = 
+			[[(SimplePocketAppDelegate *)[[UIApplication sharedApplication] delegate] cdm] itemsFetchedResultsController];
+		NSManagedObjectContext *context = [fetchedResultsController managedObjectContext];		
+		[context deleteObject:[fetchedResultsController objectAtIndexPath:indexPath]];
+		
+		NSError *error;
+		if (![context save:&error]) {
+			NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+			exit(-1);
+		}
+		
+		if (![fetchedResultsController performFetch:&error]) {
+			NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+			abort();
+		}
+		
+		[tableView reloadData];
+    }
+	
+	
+	
+	NSLog( @"[ItemsIndexController commitEditingStyle:%d forRowAtIndexPath:%d] : END", editingStyle, indexPath.row );
+}
+
 # pragma mark Actions
 - (IBAction) addItem:(id)sender{
 	NSLog( @"[ItemsIndexController addItem]" );
 
 	ItemsNewController *itemsNewController = [[ItemsNewController alloc] initWithNibName:@"ItemsNewView" bundle:nil];
+	itemsNewController.indexController = self;
+	
     [self.navigationController presentModalViewController:itemsNewController animated:YES];
 	
 	[itemsNewController release];

@@ -8,6 +8,7 @@
 
 #import "ItemsNewController.h"
 #import "SimplePocketAppDelegate.h"
+#import "ItemsIndexController.h"
 #import "Spend.h"
 
 
@@ -17,6 +18,7 @@
 @synthesize nameTextField;
 @synthesize priceTextField;
 @synthesize datePicker;
+@synthesize indexController;
 
 /*
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -100,6 +102,8 @@
 		exit(-1);  // Fail
 	}
 	
+	[indexController.tableView reloadData];
+	
 	// Dismiss the modal view to return to the main list
     [self dismissModalViewControllerAnimated:YES];
 	NSLog( @"[ItemsNewController save] : END" );
@@ -130,6 +134,7 @@
 }
 
 - (void)dealloc {
+	[indexController release];
     [super dealloc];
 }
 

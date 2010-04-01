@@ -1,5 +1,0 @@
-/Users/fguillen/Develop/IPhone/SimplePocket/Classes/SimplePocketAppDelegate.m: In function '-[SimplePocketAppDelegate applicationDidFinishLaunching:]':
-/Users/fguillen/Develop/IPhone/SimplePocket/Classes/SimplePocketAppDelegate.m:33: warning: 'CoreDataManager' may not respond to '-feedIcons'
-/Users/fguillen/Develop/IPhone/SimplePocket/Classes/SimplePocketAppDelegate.m:33: warning: (Messages without a matching method signature
-/Users/fguillen/Develop/IPhone/SimplePocket/Classes/SimplePocketAppDelegate.m:33: warning: will be assumed to return 'id' and accept
-/Users/fguillen/Develop/IPhone/SimplePocket/Classes/SimplePocketAppDelegate.m:33: warning: '...' as arguments.)
